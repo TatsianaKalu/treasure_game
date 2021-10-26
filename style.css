@@ -1,0 +1,105 @@
+@keyframes showMsg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#mapwrapper {
+    text-align: center;
+    padding: 3%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    
+}
+
+
+#hint {
+    text-align: center;
+    font-size: 50px;
+
+}
+
+#treasure {
+    position: absolute;
+    width: 100px;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7) );
+    transform: tranclate(-50%, -50%);
+   
+    
+}
+
+
+#treasure > img {
+    width: 100%;
+}
+
+
+#treasure > div {
+    position: absolute;
+    left: 110%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    top: 0;
+    width: 160px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    animation: showMsg 1.3s ease-in-out forwards;
+
+
+}
+
+#treasure > div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 10px, solid #fff;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-45deg);
+    left: -10px;
+    top: 20px;
+
+}
+
+#treasure button {
+    border-radius: 10px;
+    border: 1px solid #2d2d2d;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: block;
+    margin: 10px auto;
+
+}
+
+
+
+#treasure button:hover {
+    background: #2d2d2d;
+    color: #fff;
+
+}
+
+#timer {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
